@@ -1,0 +1,164 @@
+.coupon-container .close {
+    width: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.coupon-container {
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    max-width: 350px;
+    text-align: center;
+    background: #a3f9ff;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(30px);
+    transition: all 400ms ease;
+    top: 150px;
+    left: 30%;
+    margin: auto;
+    z-index: 2;
+    padding: 10px 20px;
+    width: 40%;
+    box-shadow: 5px 5px 500px rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+.coupon-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.coupon-container .gift {
+    position: absolute;
+    width: 180px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coupon-container .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.coupon-container h2,
+.coupon-container p,
+.coupon-container .discount,
+.coupon-container .code,
+.coupon-container .btn {
+    position: relative;
+}
+
+.coupon-container h2 {
+    color: #023047;
+    font-weight: 900;
+    font-size: 30px;
+    padding-top: 70px;
+    margin-bottom: 0;
+}
+
+.coupon-container p {
+    font-size: 18px;
+    color: #023047;
+    margin: 8px;
+}
+
+.coupon-container .discount {
+    font-family: "Poppins", sans-serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: #076170;
+}
+
+.coupon-container .code {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.coupon-container .btn {
+    text-decoration: none;
+    background: #e63946;
+    padding: 16px;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.coupon-container .btn:hover {
+    background: #e22535;
+}
+
+.get-discount-btn {
+    padding: 8px 32px;
+    background: #023047;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+@media (max-width:680px){
+    .coupon-container {
+        left: 20%;
+        width: 60%;
+        max-width: 250px;
+    }
+    .coupon-container .gift {
+        position: absolute;
+        width: 120px;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .coupon-container h2 {
+        color: #023047;
+        font-weight: 900;
+        font-size: 20px;
+        padding-top: 70px;
+        margin-bottom: 0;
+    }
+    .coupon-container p {
+        font-size: 14px;
+        color: #023047;
+        margin: 8px;
+    }
+    .coupon-container .discount {
+        font-family: "Poppins", sans-serif;
+        font-size: 36px;
+        font-weight: 300;
+        color: #076170;
+    }
+    .coupon-container .code {
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .coupon-container .btn {
+        text-decoration: none;
+        background: #e63946;
+        padding: 16px;
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        box-sizing: border-box;
+        margin-top: 24px;
+        font-size: 14px;
+        font-weight: 900;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+    }
+}

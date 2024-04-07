@@ -1,0 +1,67 @@
+.sidemenu{
+    position: fixed;
+    width: 120px;
+    max-width: 300px;
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border-radius: 2px;
+    top: 30%;
+    left: -179px;
+    z-index: 1;
+}
+.grey_background{
+    background-color: #f1f1f1 !important;
+    color: black;
+    box-shadow: 1px 1px 10px rgb(47, 47, 47);
+}
+.sidemenu_content{
+    display: flex;
+    flex-direction: column;
+}
+.sidemenu_opener{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -9%;
+    top: 45%;
+    padding: 10px 3px;
+    cursor: pointer;
+}
+.sidemenu_content_blindmode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.sidemenu_content_blindmode input{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.sidemenu_input input{
+    max-width: 130px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    outline: transparent solid 2px;
+    text-align: center;
+    padding: 5px 3px;
+}
+.sidemenu_input :not(:nth-child(2)){
+    margin-bottom: 10px;
+}
+.blindmode_lang, .blindmode_lang option{
+    max-width: 130px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    outline: transparent solid 2px;
+    text-align: center;
+    padding: 5px 3px;
+}

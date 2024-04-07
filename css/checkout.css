@@ -1,0 +1,507 @@
+::placeholder{
+    color: #b1b1b1;
+    font-weight: 600;
+}
+
+.form{
+    max-width: 1200px;
+    padding:0 24px;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form_checkout{
+    padding: 58px 48px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form_checkout_title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #191919;
+    margin-bottom: 32px;
+}
+.form_checkout_billing,.form_checkout_shipping{
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.form_checkout_billing_title{
+    font-size: 13px;
+    font-weight: 700;
+    color:#D87D4A;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+.form_checkout_billing_fields{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content:center; */
+    align-items: center;
+    max-width: 634px;
+}
+.form_checkout_billing_namefield{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+.form_checkout_billing_namefield_long{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.right_margin_20{
+    margin-right: 20px;
+}
+.top_margin_20{
+    margin-top: 20px;
+}
+.form_checkout_billing_namefield_name_error{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 8px;
+}
+.form_checkout_billing_namefield_name{
+    font-size: 12px;
+    font-weight: 700;
+    /* color:#cd2c2c; */
+    color: #191919;;
+}
+.form_checkout_billing_namefield_error{
+    font-size: 12px;
+    font-weight: 400;
+    color:#cd2c2c;
+    display: none;
+}
+.form_checkout_billing_namefield_input{
+    padding: 16px 0 16px 16px;
+    outline: transparent solid 2px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    /* width: 100%; */
+}
+.form_checkout_payment_namefield_name_error{
+    display: flex;
+    flex-direction: row;
+    justify-content:stretch;
+}
+.form_checkout_payment_namefield_name{
+    font-size: 12px;
+    font-weight: 700;
+    color: #191919;
+    width: 48%;
+}
+.form_checkout_payment_type{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+.form_checkout_payment_type_upi{
+    font-size: 14px;
+    color: #191919;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+    padding:16px 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 1;
+    width: 100%;
+}
+
+input[type='radio']::before{
+    width: 20px;
+    height: 20px;
+    border-radius: 200%;
+    top: -7px;
+    /* margin: 0 5px 0 0; */
+    left: -7px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #cfcfcf;
+}
+
+input[type='radio']:checked::after{
+    width: 10px;
+    height: 10px;
+    border-radius: 150%;
+    top: -27.6px;
+    left: -1.9px;
+    position: relative;
+    background-color: #D87D4A;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #cfcfcf;
+}
+.form_checkout_payment_type_upi_label{
+    margin-left: 10px;
+}
+
+.form_checkout_billing_namefield_long_output{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 24px;
+}
+.form_checkout_billing_namefield_long_output_img_text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form_checkout_billing_namefield_long_output_text{
+    font-size: 15px;
+    color: #00000080;
+    margin-left: 32px;
+    font-weight: 400;
+}
+
+.form_summery{
+    max-width: 280px;
+    width: 32%;
+    margin-left: 32px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.form_summer_title{
+    font-size: 18px;
+    font-weight: 700;
+    color: #191919;
+    letter-spacing: 1.3px;
+}
+.form_summer_products{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+.form_summer_products_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form_summer_products_item:not(:first-child){
+    margin-top: 24px;
+}
+.form_summer_products_item_img_info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form_summer_products_item_img img{
+    max-width: 64px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.form_summer_products_item_name_price{
+    display: flex;
+    flex-direction: column;
+}
+.form_summer_products_item_name{
+    font-size: 15px;
+    color: #191919;
+    font-weight: 700;
+    line-height: 1.99;
+}
+.form_summer_products_item_price{
+    font-size: 14px;
+    font-weight: 700;
+    color: #00000080;
+}
+.form_summer_products_item_quantity{
+    font-size: 15px;
+    color: #00000080;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.form_summer_total,.form_summer_grandtotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.form_summer_total:nth-child(3){
+    margin-top: 32px;
+}
+.form_summer_total_name,.form_summer_grandtotal_name{
+    font-size: 15px;
+    color: #00000080;
+    line-height: 1.66;
+}
+.form_summer_total_num,.form_summer_grandtotal_num{
+    font-size: 18px;
+    color: #191919;
+    font-weight: 700;
+    line-height: 1.66;
+}
+.form_summer_grandtotal{
+    margin-top: 24px;
+}
+.form_summer_grandtotal_num{
+    color: #D87D4A;
+}
+.form_summer_btn{
+    margin-top: 24px;
+    text-align: center;
+    background-color: #D87D4A;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 13px;
+    padding:14px 0;
+    letter-spacing: 1px;
+    cursor: pointer; 
+    border: none;
+}
+
+.check_email{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000007a;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    overflow-y: scroll;
+}
+.check_email_main{
+    /* top: 0;
+    left: 0;
+    right: 0; */
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    /* margin-top:62px; */
+    padding: 48px;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 460px;
+    width: 70%;
+}
+.check_email_main_img{
+    margin-bottom: 24px;
+}
+.check_email_main_thanks{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.125;
+    color: #191919;
+}
+.check_email_main_email{
+    font-size: 15px;
+    margin-bottom: 32px;
+    color: #00000080;
+}
+.check_email_main_items_total_box{
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 8px;
+    width: 100%;
+}
+.check_email_main_items_box{
+    background-color: #f1f1f1;
+    align-items: center;
+    width: 60%;
+    padding: 24px;
+    padding-bottom: 0%;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.check_email_main_total_box{
+    padding: 42px 32px;
+    background-color: #191919;
+    color: #FFFFFF;
+    width: 40%;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-weight: 700;
+    font-size: 15px;
+}
+.check_email_main_total_box_name{
+    color: #FFFFFF80;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.check_email_main_items_box_other{
+    padding: 16px;
+    color: #00000080;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.check_email_main_items_box_other:hover{
+    text-decoration: underline;
+}
+.check_email_main_back_btn{
+    font-size: 13px;
+    padding: 14px 32px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #D87D4A;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.check_email_main_back_btn:hover{
+   background-color: #fbaf85;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:990px){
+    .form{
+        flex-direction: column;
+        margin: auto;
+        /* padding: 24px; */
+        padding: 3%;
+    }
+    .form_checkout{
+        width: 95%;
+        /* width: unset; */
+        padding: 30px 3% 32px;
+    }
+    .form_checkout_billing,.form_checkout_shipping{
+        width: 100%;
+    }
+    .form_checkout_billing_fields{
+        max-width:1200px;
+        width: 100%;
+    }
+    .form_checkout_billing_namefield{
+        display: flex;
+        flex-direction: column;
+        /* max-width: 1000px; */
+        width: 47.50%;
+        min-width: 20px;
+    }
+    .form_checkout_billing_namefield_input{
+        min-width: 10px;
+        width: 95%;
+    }
+    .form_checkout_payment_type_upi{
+        width: 97%;
+    }
+
+
+
+    .form_summery{
+        max-width: unset;
+        width: 92%;
+        margin-left: 0px;
+        margin: auto;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width:770px){
+    .check_email_main{
+        max-width: 360px;
+        width: 90%;
+        margin: 60px 24px;
+        padding: 32px;
+    }
+    .check_email_main_email{
+        margin-bottom: 22px;
+    }
+    .check_email_main_items_total_box{
+        flex-direction: column;
+        border-radius: 8px;
+        width: 100%;
+    }
+    .check_email_main_items_total_box{
+        margin-bottom: 24px;
+    }
+    .check_email_main_items_box{
+        width: unset;
+        border-radius: 8px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .check_email_main_total_box{
+        width: unset;
+        border-radius: 8px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 18px 24px;
+    }
+    .check_email_main_back_btn{
+        padding: 14px 20px;
+    }
+}
+
+
+
+@media (max-width:480px){
+    .form_checkout_billing_namefield{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 20px;
+    }
+    .right_margin_20{
+        margin-right: 0px;
+    }
+    .top_margin_20{
+        margin-top: 0px;
+    }
+    .form_checkout_billing input,.form_checkout_shipping input{
+        margin-bottom: 10px;
+    }
+    .form_checkout_payment_namefield_name_error{
+        flex-direction: column;
+    }
+    .form_checkout_payment_namefield_name{
+        margin-bottom: 10px;
+    }
+    .form_checkout_payment_type{
+        width: 97%;
+    }
+    .check_email_main_thanks{
+        font-size: 24px;
+    }
+    .form_checkout_billing_namefield_long_output{
+        display: flex;
+        flex-direction:column ;
+    }
+}

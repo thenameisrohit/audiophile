@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophile Shop - Speakers</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/speakers.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/products.css">
+
+</head>
+
+<body>
+    
+    <!-- Side Menu -->
+    <div class="sidemenu grey_background" id="sidemenu">
+        <div class="sidemenu_opener grey_background" id="sidemenu_opener" onmouseover="play_audio('Blind Mode setting')" onmouseleave="stop_audio()">
+            <img src="/images/icon-arrow-right.svg" alt="">
+        </div>
+        <div class="sidemenu_content">
+            <label for="blindmode" class="sidemenu_content_blindmode sidemenu_input" onmouseover="play_audio('Enable Blind Mode')" onmouseleave="stop_audio()">
+                <input type="checkbox" name="blindmode" id="blindmode"> Blind Mode
+            </label>
+            <div class="sidemenu_content_blindmode_speed sidemenu_input">
+                <input type="number" name="blindmode_speed" id="blindmode_speed" step="0.1" value="1.2"
+                    placeholder="Speed" onmouseover="play_audio('Enter Speed')" onmouseleave="stop_audio()" oninput="read_input(this)">
+            </div>
+            <div class="sidemenu_content_blindmode_lang sidemenu_input">
+                <select name="blindmode_lang" id="blindmode_lang" class="blindmode_lang" onmouseover="play_audio('Select Language')" onmouseleave="stop_audio()">
+                    <option value="IN" >en-India</option>
+                    <option value="CH">en-China</option>
+                    <option value="US">en-USA</option>
+                </select>
+            </div>
+            <div class="sidemenu_content_blindmode_volume sidemenu_input">
+                <input type="number" name="blindmode_volume" id="blindmode_volume" step="2" value="50"
+                    placeholder="Volume" onmouseover="play_audio('Enter Volume')" onmouseleave="stop_audio()" oninput="read_input(this)">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header_cart_section2" id="header_cart_section2"></div>
+    <div class="header_cart_section_background" id="header_cart_section_background">
+        <div class="empty_text">
+            Your cart is empty
+        </div>
+        <div class="empty_cart_icon">
+            <img src="/images/empty-cart-icon.svg" alt="">
+        </div>
+    </div>
+    <div class="main" id="main">
+        <div class="dark">
+            <header class="header">
+                <nav class="nav">
+                    <div class="header_hamburger" id="header_hamburger" onmouseover="play_audio('Menu Button')"
+                        onmouseleave="stop_audio()">
+                        <img src="/images/icon-hamburger.svg" alt="">
+                    </div>
+                    <a class="header_icon" href="/" onmouseover="play_audio('Audiophila logo')"
+                        onmouseleave="stop_audio()">
+                        <img src="/images/logo2.png" alt="">
+                    </a>
+                    <div class="header_menus">
+                        <a class="menu" href="/" onmouseover="play_audio('Home Menu')"
+                            onmouseleave="stop_audio()">HOME</a>
+                        <a class="menu " href="/html/headphones.html" onmouseover="play_audio('Headphones Menu')"
+                            onmouseleave="stop_audio()">HEADPHONES</a>
+                        <a class="menu" href="/html/speakers.html" onmouseover="play_audio('Speakers Menu')"
+                            onmouseleave="stop_audio()">SPEAKERS</a>
+                        <a class="menu active" href="/html/earthphones.html" onmouseover="play_audio('earthphones menu')"
+                            onmouseleave="stop_audio()">EARTHPHONES </a>
+                    </div>
+                    <div class="header_cart" id="header_cart" onmouseover="play_audio('Open cart')"
+                        onmouseleave="stop_audio()">
+                        <img src="/images/cart.svg" alt="">
+                    </div>
+                    <div class="mobile_menu" id="mobile_menu" onmouseover="play_audio('Mobile Menu')"
+                        onmouseleave="stop_audio()">
+                        <div class="mobile_menu_background">
+                            <section class="section2 mobile_section2">
+                                <a class="section2_item" href="/html/headphones.html"
+                                    onmouseover="play_audio('Headphone Menu')" onmouseleave="stop_audio()">
+                                    <div class="section2_item_img">
+                                        <img src="/images/image-headphones.png" alt="">
+                                    </div>
+                                    <div class="section2_item_title">
+                                        HEADPHONES
+                                    </div>
+                                    <div class="section2_item_shop">
+                                        SHOP <img src="/images/icon-arrow-right.svg" alt="">
+                                    </div>
+                                </a>
+                                <a class="section2_item" href="/html/speakers.html"
+                                    onmouseover="play_audio('speaker menu')" onmouseleave="stop_audio('speaker_menu')">
+                                    <div class="section2_item_img">
+                                        <img src="/images/image-speakers.png" alt="">
+                                    </div>
+                                    <div class="section2_item_title">
+                                        SPEACKERS
+                                    </div>
+                                    <div class="section2_item_shop">
+                                        SHOP <img src="/images/icon-arrow-right.svg" alt="">
+                                    </div>
+                                </a>
+                                <a class="section2_item" href="/html/earthphones.html"
+                                    onmouseover="play_audio('earphone menu')"
+                                    onmouseleave="stop_audio('earphone_menu')">
+                                    <div class="section2_item_img">
+                                        <img src="/images/image-earphones.png" alt="">
+                                    </div>
+                                    <div class="section2_item_title">
+                                        EARTHPHONES
+                                    </div>
+                                    <div class="section2_item_shop">
+                                        SHOP <img src="/images/icon-arrow-right.svg" alt="">
+                                    </div>
+                                </a>
+                            </section>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+
+            <section class="speakers_section" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                <div class="speakers_section_title" >
+                    EARPHONES
+                </div>
+            </section>
+        </div>
+
+
+        <div class="light">
+            <section class="speakers_section2">
+                <div class="speakers_section2_products">
+                    <div class="speakers_section2_item">
+                        <div class="speakers_section2_item_img" onmouseover="play_audio('Image of YX1 WIRELESS EARPHONES')" onmouseleave="stop_audio()">
+                            <picture>
+                                <source media="(min-width: 990px)"
+                                    srcset="/images/category-earphones/desktop/earphoneDesktop.jpg">
+                                <source media="(min-width: 480px)"
+                                    srcset="/images/category-earphones/tablet/image-yx1-earphones.jpg">
+                                <img alt="ZX9 Speaker" class="chakra-image css-1pz0uuv"
+                                    src="/images/category-earphones/mobile/image-yx1-earphones.jpg">
+                            </picture>
+                        </div>
+                        <div class="speakers_section2_item_info">
+                            <div class="speakers_section2_item_info_new" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                                NEW PRODUCT
+                            </div>
+                            <div class="speakers_section2_item_info_title" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                                YX1 WIRELESS EARPHONES
+                            </div>
+                            <div class="speakers_section2_item_info_desc" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                                Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless
+                                Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its
+                                active noise cancellation feature.
+                            </div>
+                            <a href="/html/products/earthphones/YX1_WIRELESS_EARPHONES.html" class="speakers_section2_item_info_btn" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                                SEE PRODUCTS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section2">
+                <a href="/html/headphones.html" class="section2_item" onmouseover="play_audio('Shop Headphone')" onmouseleave="stop_audio()">
+                    <div class="section2_item_img">
+                        <img src="/images/image-headphones.png" alt="">
+                    </div>
+                    <div class="section2_item_title">
+                        HEADPHONES
+                    </div>
+                    <div class="section2_item_shop">
+                        SHOP <img src="/images/icon-arrow-right.svg" alt="">
+                    </div>
+                </a>
+                <a href="/html/speakers.html" class="section2_item" onmouseover="play_audio('Shop Speakers')" onmouseleave="stop_audio()">
+                    <div class="section2_item_img">
+                        <img src="/images/image-speakers.png" alt="">
+                    </div>
+                    <div class="section2_item_title">
+                        SPEACKERS
+                    </div>
+                    <div class="section2_item_shop">
+                        SHOP <img src="/images/icon-arrow-right.svg" alt="">
+                    </div>
+                </a>
+                <a href="/html/earthphones.html" class="section2_item" onmouseover="play_audio('Shop EARPHONES')" onmouseleave="stop_audio()">
+                    <div class="section2_item_img">
+                        <img src="/images/image-earphones.png" alt="">
+                    </div>
+                    <div class="section2_item_title">
+                        EARTHPHONES
+                    </div>
+                    <div class="section2_item_shop">
+                        SHOP <img src="/images/icon-arrow-right.svg" alt="">
+                    </div>
+                </a>
+            </section>
+
+            <section class="section6">
+                <div class="section6_item">
+                    <div class="section6_item_info">
+                        <div class="section6_item_title" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                            BRINGING YOU THE <span>BEST</span>
+                            AUDIO GEAR
+                        </div>
+                        <div class="section6_item_desc" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                            Located at the heart of New York City, Audiophile is the premier store for high end
+                            headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury
+                            demonstration rooms available for you to browse and experience a wide range of our products.
+                            Stop by our store to meet some of the fantastic people who make Audiophile the best place to
+                            buy your portable audio equipment.
+                        </div>
+                    </div>
+                    <div class="section6_item_img"  onmouseover="play_audio('Image of MobileGear')" onmouseleave="stop_audio()"></div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="dark footer_dark">
+            <footer class="footer">
+                <nav class="nav footer_nav">
+                    <a href="/" class="header_icon footer_logo"  onmouseover="play_audio('Audiophilla footer logo')" onmouseleave="stop_audio()">
+                        <img src="/images/logo.svg" alt="">
+                    </a>
+                    <div class="header_menus footer_menus">
+                        <a class="menu" href="/"  onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">HOME</a>
+                        <a class="menu " href="/html/headphones.html"  onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">HEADPHONES</a>
+                        <a class="menu" href="/html/speakers.html"  onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">SPEAKERS</a>
+                        <a class="menu active" href="/html/earthphones.html"  onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">EARTHPHONES </a>
+                    </div>
+                </nav>
+                <div class="footer_info_icon">
+                    <div class="footer_info">
+                        <div class="footer_info_desc" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                            Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music
+                            lovers and sound specialists who are devoted to helping you get the most out of personal
+                            audio. Come and visit our demo facility - we’re open 7 days a week.
+                        </div>
+                        <div class="footer_info_copy" onmouseover="speaker(this)" onmouseleave="stop_speaker(this)">
+                            Copyright 2021. All Rights Reserved
+                        </div>
+                    </div>
+                    <div class="footer_icon">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            focusable="false" onmouseover="play_audio('Facebook Link')" onmouseleave="stop_audio()">
+                            <path
+                                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                                fill="#FFF" fill-rule="nonzero"></path>
+                        </svg>
+                        <svg width="24" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            focusable="false"  onmouseover="play_audio('Twitter Link')" onmouseleave="stop_audio()">
+                            <path
+                                d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
+                                fill="#FFF" fill-rule="nonzero"></path>
+                        </svg>
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            focusable="false"  onmouseover="play_audio('Instagram Link')" onmouseleave="stop_audio()">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                                fill="#FFF" fill-rule="nonzero"></path>
+                        </svg>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+</body>
+<script src="/javascript/audio.js"></script>
+<script src="/javascript/index.js"></script>
+<script src="/javascript/menu.js"></script>
+<script src="/javascript/add_to_cart.js"></script>
+<script src="/javascript/cart.js"></script>
+<script src="/javascript/sidemenu.js"></script>
+<script src="/javascript/speech.js"></script>
+
+</html>
